@@ -1,0 +1,23 @@
+{
+  "name": "page-title",
+  "version": "1.0.0",
+  "description": "NPM Package Test for Glasswall.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahewitt-glasswall/page-title.git"
+  },
+  "author": "ahewitt-glasswall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahewitt-glasswall/page-title/issues"
+  },
+  "homepage": "https://github.com/ahewitt-glasswall/page-title#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "webpack": "^4.42.1"
+  }
+}
