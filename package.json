@@ -4,6 +4,7 @@
   "description": "NPM Package Test for Glasswall.",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,11 @@
   "dependencies": {
     "react": "^16.13.1",
     "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0"
   }
 }
