@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './PageTitle.scss';
+import styles from './PageTitle.module.scss';
 
 const PageTitle = ({heading, subHeading, children}) => {
     return (

@@ -7,8 +7,8 @@ module.exports = {
     entry: path.join(__dirname, "./index.js"),
     output: {
         path: path.join(__dirname, "./dist"),
-        filename: "./PageTitle.js",
-        library: "Glasswall",
+        filename: "page-title.js",
+        library: pkg.name,
         libraryTarget: "umd",
         publicPath: "/dist/",
         umdNamedDefine: true
