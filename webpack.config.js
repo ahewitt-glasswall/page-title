@@ -7,7 +7,7 @@ module.exports = {
     entry: path.join(__dirname, "./index.js"),
     output: {
         path: path.join(__dirname, "./dist"),
-        filename: "page-title.js",
+        filename: "index.js",
         library: pkg.name,
         libraryTarget: "umd",
         publicPath: "/dist/",

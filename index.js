@@ -1,2 +1,1 @@
-import PageTitle from "./PageTitle.jsx";
-export default PageTitle;
+module.exports.PageTitle = require("./PageTitle.jsx");
