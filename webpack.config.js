@@ -1,24 +1,27 @@
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const pkg = require("./package.json");
 const path = require("path");
 
 module.exports = {
-    entry: path.join(__dirname, "./index.js"),
-    output: {
-        path: path.join(__dirname, "./dist"),
-        filename: "index.js",
-        library: pkg.name,
-        libraryTarget: "umd",
-        publicPath: "/dist/",
-        umdNamedDefine: true
-    },
-    plugins: [new MiniCssExtractPlugin()],
+    entry: path.join(__dirname, "./src/page-title.jsx"),
+    // entry: path.join(__dirname, "./src/page-title-local.jsx"),
+    // devServer: {
+    //     contentBase: './dist',
+    // },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.(css|scss)$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',                        
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }
+                ],
             },
             {
                 test: /\.(js|jsx)$/,
@@ -28,5 +31,21 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "index.css"
+        }),
+        new HtmlWebpackPlugin({
+            template: "src/index.html"
+        }),
+    ],
+    output: {
+        path: path.join(__dirname, "./"),
+        filename: "index.js",
+        library: pkg.name,
+        libraryTarget: "umd",
+        publicPath: "/",
+        umdNamedDefine: true
+    },
 };
